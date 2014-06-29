@@ -98,3 +98,4 @@ module Octopress
 end
 
 Liquid::Template.register_tag('render', Octopress::Tags::RenderTag::Tag)
+Liquid::Template.register_tag('render_partial', Octopress::Tags::RenderTag::Tag)
