@@ -1,35 +1,34 @@
----
----
-{% assign file = 'test_render/_f.html' %}
-{% assign file2 = 'test_render/_var.html' %}
-{% assign relative = './_test_render.md' %}
-{% assign some_bool = true %}
-{% assign test_var = 'variable' %}
+
+
+
+
+
 
 ## Simple render
-Testing Render → {% render test_render/_f.html %}
-Testing Render whatever → {% render test_render/_f.html var="whatever" %}
+Testing Render → Testing Render
+Testing Render whatever → Testing Render whatever
 
 ## File name stored in variable
-Testing Render → {% render file %}
+Testing Render → Testing Render
 
 ## Post conditional render
-'' → '{% render file unless true %}'
-Testing Render → {% render file if some_bool %}
+'' → ''
+Testing Render → Testing Render
 
 ## Test Variables
-kittens → {% render test_render/_var.html %}
+kittens → kittens
 
 ## Test Filters
-KITTENS → {% render test_render/_var.html | upcase %}
-MITTENS → {% render test_render/_var.html | replace:"k","m" | upcase %}
+KITTENS → KITTENS
+MITTENS → MITTENS
 
 ## Ternary include
-kittens → {% render (false ? file : file2) %}
-Testing Render → {% render (some_bool ? file : file2) %}
+kittens → kittens
+Testing Render → Testing Render
 
 ## Render markdown with local vars
-<p><strong>page vars</strong></p> → {% render relative %}
+<p><strong>page vars</strong></p> → <p><strong>page vars</strong></p>
 
 ## Render raw
-{% raw %}Testing Render {{ include.var }}{% endraw %} → {% render raw file %}
+Testing Render {{ include.var }} → Testing Render {{ include.var }}
+

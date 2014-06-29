@@ -1,3 +1,4 @@
 source 'https://rubygems.org'
 
 gem 'octopress-render-tag', path: '../'
+gem 'pry-debugger'

@@ -9,12 +9,11 @@ github_username:  jekyll
 
 exclude:
   - Gemfile*
-  - expected.html
+  - expected/
   - test.rb
 
 render_test: kittens
 # Build settings
 markdown: kramdown
-permalink: pretty
 gems:
   - octopress-render-tag
