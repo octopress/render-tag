@@ -10,8 +10,6 @@ github_username:  jekyll
 exclude:
   - Gemfile*
   - expected/
-  - test.rb
-  - test_suite.rb
 
 render_test: kittens
 # Build settings
