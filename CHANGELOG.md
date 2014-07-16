@@ -1,6 +1,10 @@
 # Changelog
 
-### 1.0.1 - 2014-06-29
+### 1.0.2 - 2014-07-16
+
+- Added Octopress Ink plugin
+
+### 1.0.1 - 2014-07-16
 
 - Added docs for Octopress Ink
 
