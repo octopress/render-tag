@@ -1,5 +1,6 @@
 require "octopress-render-tag/version"
 require "octopress-tag-helpers"
+require "octopress-render-tag/ink-plugin"
 require "jekyll-page-hooks"
 require "jekyll"
 
