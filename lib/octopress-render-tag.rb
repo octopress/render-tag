@@ -1,7 +1,7 @@
 require "octopress-render-tag/version"
 require "octopress-tag-helpers"
 require "octopress-render-tag/ink-plugin"
-require "jekyll-page-hooks"
+require "octopress-render-tag/hooks"
 require "jekyll"
 
 module Octopress
@@ -51,9 +51,7 @@ module Octopress
 
           content = replace_raw(content)
 
-          if defined?(Jekyll::ConvertiblePartial)
-            content = parse_convertible(content, context).strip
-          end
+          content = parse_convertible(content, context).strip
 
           unless content.nil? || filters.nil?
             content = TagHelpers::Var.render_filters(content, filters, context)
@@ -88,7 +86,7 @@ module Octopress
         end
         
         def parse_convertible(content, context)
-          page = Jekyll::ConvertiblePartial.new(context.registers[:site], @path, content)
+          page = Octopress::Partial.new(context.registers[:site], @path, content)
           page.render({})
           page.output.strip
         end

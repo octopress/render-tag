@@ -1,2 +1,2 @@
 build: true 
-compare: "_site, _expected"
+compare: "_expected, _site"

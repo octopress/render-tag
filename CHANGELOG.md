@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.0.3 - 2014-07-27
+
+- No longer requires Jekyll page hooks.
+- Triggers Octopress hooks if present.
+
 ### 1.0.2 - 2014-07-16
 
 - Added Octopress Ink plugin
