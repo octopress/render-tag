@@ -1,9 +1,14 @@
 # Changelog
 
+### 1.0.5 - 2015-01-03
+
+- Removed duplicate docs.
+- Removed tests from gem files.
+
 ### 1.0.4 - 2015-01-03
 
-- Added support for Octopress Docs
-- Fix to Partial rendering
+- Added support for Octopress Docs.
+- Fix to Partial rendering.
 
 ### 1.0.3 - 2014-07-27
 
