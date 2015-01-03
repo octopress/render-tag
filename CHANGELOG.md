@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.0.4 - 2015-01-03
+
+- Added support for Octopress Docs
+- Fix to Partial rendering
+
 ### 1.0.3 - 2014-07-27
 
 - No longer requires Jekyll page hooks.

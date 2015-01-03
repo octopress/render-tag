@@ -1,7 +1,6 @@
 require "octopress-render-tag/version"
-require "octopress-tag-helpers"
-require "octopress-render-tag/ink-plugin"
 require "octopress-render-tag/hooks"
+require "octopress-tag-helpers"
 require "jekyll"
 
 module Octopress
@@ -86,7 +85,7 @@ module Octopress
         end
         
         def parse_convertible(content, context)
-          page = Octopress::Partial.new(context.registers[:site], @path, content)
+          page = Partial.new(context.registers[:site], @path, content)
           page.render({})
           page.output.strip
         end
@@ -98,3 +97,14 @@ end
 
 Liquid::Template.register_tag('render', Octopress::Tags::RenderTag::Tag)
 Liquid::Template.register_tag('render_partial', Octopress::Tags::RenderTag::Tag)
+
+if defined? Octopress::Docs
+  Octopress::Docs.add({
+    name:        "Octopress Render Tag",
+    description: "Embed files directly from the file system. This tag also supports conditional rendering, in-line filters.",
+    path:        File.expand_path(File.join(File.dirname(__FILE__), "../")),
+    type:        "tag",
+    source_url:  "https://github.com/octopress/render-tag",
+    version:     Octopress::Tags::RenderTag::VERSION
+  })
+end
