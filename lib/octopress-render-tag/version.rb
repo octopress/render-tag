@@ -1,7 +1,7 @@
 module Octopress
   module Tags
-    module RenderTag
-      VERSION = "1.0.5"
+    module Render
+      VERSION = "1.0.6"
     end
   end
 end

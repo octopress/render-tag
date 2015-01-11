@@ -5,7 +5,7 @@ require 'octopress-render-tag/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "octopress-render-tag"
-  spec.version       = Octopress::Tags::RenderTag::VERSION
+  spec.version       = Octopress::Tags::Render::VERSION
   spec.authors       = ["Brandon Mathis"]
   spec.email         = ["brandon@imathis.com"]
   spec.summary       = %q{Render files inline on any Jekyll page or post}

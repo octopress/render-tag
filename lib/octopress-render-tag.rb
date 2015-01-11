@@ -5,7 +5,7 @@ require "jekyll"
 
 module Octopress
   module Tags
-    module RenderTag
+    module Render
       class Tag < Liquid::Tag
         SYNTAX = /(\S+)(.+)?/
 
@@ -95,8 +95,8 @@ module Octopress
   end
 end
 
-Liquid::Template.register_tag('render', Octopress::Tags::RenderTag::Tag)
-Liquid::Template.register_tag('render_partial', Octopress::Tags::RenderTag::Tag)
+Liquid::Template.register_tag('render', Octopress::Tags::Render::Tag)
+Liquid::Template.register_tag('render_partial', Octopress::Tags::Render::Tag)
 
 if defined? Octopress::Docs
   Octopress::Docs.add({
@@ -105,6 +105,6 @@ if defined? Octopress::Docs
     path:        File.expand_path(File.join(File.dirname(__FILE__), "../")),
     type:        "tag",
     source_url:  "https://github.com/octopress/render-tag",
-    version:     Octopress::Tags::RenderTag::VERSION
+    version:     Octopress::Tags::Render::VERSION
   })
 end

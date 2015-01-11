@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.0.6 - 2015-01-11
+
+- Minor docs updates
+- Module name change
+
 ### 1.0.5 - 2015-01-03
 
 - Removed duplicate docs.
