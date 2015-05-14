@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.7 - 2015-05-14
+- Support for Jekyll 2 & 3
+
 ### 1.0.6 - 2015-01-11
 
 - Minor docs updates

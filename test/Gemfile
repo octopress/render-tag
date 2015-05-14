@@ -1,4 +1,0 @@
-source 'https://rubygems.org'
-
-gemspec path: '../'
-gem "octopress-tag-helpers", path: "../../tag-helpers"

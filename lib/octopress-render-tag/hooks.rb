@@ -19,29 +19,7 @@ module Octopress
     end
     
     def render(payload)
-      pre_render
       do_layout(payload, { no_layout: nil })
-      post_render
-    end
-
-    def hooks
-      if self.site.respond_to? :page_hooks
-        self.site.page_hooks
-      else
-        []
-      end
-    end
-
-    def pre_render
-      self.hooks.each do |hook|
-        hook.pre_render(self)
-      end
-    end
-
-    def post_render
-      self.hooks.each do |hook|
-        hook.post_render(self)
-      end
     end
   end
 end
